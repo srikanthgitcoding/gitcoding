@@ -1,0 +1,3 @@
+1) npm i -g webpack-cli@version
+
+2) webpack-cli init - here it creates webpack packages and package,json and bable file evrything

@@ -1,0 +1,2 @@
+def reverse(data_list):
+    return data_list[::-1]

@@ -1,0 +1,27 @@
+1. what is babel? why do we need in react js?
+
+- it convert the latest js code into the one that browser understands
+
+2.  When using modern js we need 2 kind of tools
+    Tranpiler(babel)(translator + compiler = transpolar -> it converts modern js to es5 or browser understandable js ) + bundler (webpack)(combines all js files to one js )
+
+How to create package.json file. - - npm init —yes
+
+How Install babel?
+
+Npm I babel-cli@add @to specify a specific number5.33 babel-core@6.26.0 babel-preset-env@45.55 --save-dev(this means we are gng to install these as dev dependecy)
+
+babel-cli - babel command line interface - we run from terminal - it compiles our js code
+babel-core - core babel where all the logic for transpiling code implemented
+babel-preset-env - every es6 has a plugin such as let and all(combination of all new featutes u can inbstall specific plugin like let plugin)
+
+1. first create package.json file
+2. Install babel dependencies
+3. setup package.json
+4. run - npm run babel - this excutes commna din package.json file script babel
+
+"scripts": {
+"babel": "babel --presets env index.js -o build/index.js", - here we are compiling only index.js file what if we have 100 files u cant give refernce to 100 files so use webpack
+},
+
+

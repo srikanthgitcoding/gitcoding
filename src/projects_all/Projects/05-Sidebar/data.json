@@ -1,0 +1,15 @@
+[
+    [
+        "dashboard"
+    ],
+    {
+        "table" : ["table1","table2","table3"]
+    },
+    {
+        "UserData" : ["userdata1","userdata12","userdata13"]
+    },
+    {
+        "charts" : ["chart1","chart2","chart3"]
+    }
+]
+

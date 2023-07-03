@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Differences between innerText, innerHTML and textContent.</h3>
+
+<p id="demo">   This element has extra spacing   and contains <span>a span element</span>.</p>
+
+<button onclick="getInnerText()">Get innerText</button>
+<button onclick="getHTML()">Get innerHTML</button>
+<button onclick="getTextContent()">Get textContent</button>
+
+<p><strong>Note:</strong> The textContent property is not supported in Internet Explorer 8 and earlier, and the innerText property is not supported in IE9 and earlier.</p>
+
+<p id="demo"></p>
+
+<script>
+function getInnerText() {
+  console.log(document.getElementById("demo").innerText)
+}
+
+function getHTML() {
+    console.log(document.getElementById("demo").innerHTML)
+}
+
+function getTextContent() {
+    console.log(document.getElementById("demo").textContent)
+}
+</script>
+
+</body>
+</html>
+
+
+<!-- The innerText property returns just the text, without spacing and inner element tags.
+The innerHTML property returns the text, including all spacing and inner element tags.
+The textContent property returns the text with spacing, but without inner element tags. -->

@@ -1,0 +1,78 @@
+1) handling unexpected errors globally
+    Axios interceptors 
+    say u r making http call get post put delete - any time there can be error in any of the http call so rather
+    adding try catch in each method we can add globally using interceptors 
+    
+
+
+1) what is babel? why do we need in react js?
+
+-  it convert the latest js code into the one that browser understands 
+
+2)
+When using modern js we need 2 kind of tools
+ Tranpiler(babel)(translator + compiler = transpolar -> it converts modern js to es5 or browser understandable js ) + bundler (webpack)(combines all js files to one js )
+
+How to create package.json file. -
+	-    npm init —yes 
+
+How Install babel?
+
+ Npm I babel-cli@add @to specify a specific number5.33 babel-core@6.26.0 babel-preset-env@45.55
+
+babel-cli - babel command line interface - we run from terminal - it compiles our js code 
+babel-core - core babel where all the logic for transpiling code implemented 
+babel-preset-env -  every es6 has a plugin such as let and all 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

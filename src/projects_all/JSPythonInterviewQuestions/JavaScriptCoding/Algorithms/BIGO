@@ -1,0 +1,16 @@
+#time complexity
+#-------------------
+# O(1) -> constant time complexity - one statement 
+# O(n) -> linear time complexity - one for loop 
+# O(n2) -> QuaDRATIC - 2 nested for loops
+# O(n3) -> cubic - 3 nested for loops
+# O(logn) ->logarthmic -> if input size reduced by half - 
+
+# Space complexity
+# ----------------
+# O(1) -> constant time complexity - one statement 
+# O(n) -> linear time complexity - one for loop 
+# O(logn) ->logarthmic -> if input size reduced by half - 
+
+
+

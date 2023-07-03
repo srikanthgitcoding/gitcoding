@@ -1,0 +1,9 @@
+--------------------------------------
+1) npx create-react-app my-app
+2) cd my-app
+3) npm install --global yarn
+4) check version - yarn --version
+5) yarn start
+6) install axios - npm install axios
+7) install react router - npm i react-router-dom
+8) install redux and react redux which gives us hooks to connect - npm i redux react-redux

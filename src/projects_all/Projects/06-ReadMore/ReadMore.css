@@ -1,0 +1,15 @@
+:root{
+    /*dark shafes of primary color*/
+    /* --clr-primary-1 : #777 */
+    --primary:#777
+    
+    
+    /*
+    scenarios that doesnt work and -- is mandatory
+    */
+}
+
+.selelctebtn{
+    background : var(--primary);
+    color:black
+}

@@ -1,0 +1,11 @@
+a=10
+b = 20
+
+a = a+b
+b = a-b
+a = a-b
+
+console.log(a,b)
+
+d = 50,30
+console.log(d)

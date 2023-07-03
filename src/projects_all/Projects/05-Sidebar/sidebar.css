@@ -1,0 +1,9 @@
+.hide{
+    display: none;
+}
+.highlightBlue{
+    color: blue;
+}
+.show{
+    display: block;
+}

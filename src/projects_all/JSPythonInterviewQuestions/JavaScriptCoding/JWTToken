@@ -1,0 +1,12 @@
+jWT token 
+javscript object notation web token
+the encoded JWT assosoated with HEADER -PAYLOAD - VERIFY SIGNATURE
+
+1234sdf56sf76.jkh23r324bd3c434jkh.hjb23mnb214jnb
+------------------------------------------------
+HEADER         PAYLOAD             SIGNATURE 
+
+HEADER : {
+    ALG:"",
+    TYP:""
+}

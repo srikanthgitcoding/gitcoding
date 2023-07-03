@@ -1,0 +1,28 @@
+1)what is django?
+ -  Django is a Python framework that makes it easier to create web sites using Python.
+    Django takes care of the difficult stuff so that you can concentrate on building your web applications.
+    Django emphasizes reusability of components, also refereed to as DRY (Don't Repeat Yourself), and comes with ready-to-use features like 
+    login system, database connection and CRUD operations (Create Read Update Delete).
+2) How does Django Work?
+ - Django follows the MVT design pattern (Model View Template).
+Model : The model provides data from the database.
+    Django, with ORM, makes it easier to communicate with the database, without having to write complex SQL 
+    statements. The models are usually located in a file called models.py.
+View : 
+(Django views are Python functions that takes http requests and returns http response, like HTML documents.)
+A view is a function or method that takes http requests as arguments, imports the relevant model(s), 
+and finds out what data to send to the template, and returns the final result.
+The views are usually located in a file called views.py.
+Templates : Templates are often .html files, 
+4) what is django latest version - 4.1
+5) what is serializer - 
+serializer basically converts db query sets to json or xml format which can be understood eaily by front end framework like js
+example of query set - <QuerySet [{'id': 1, 'name': 'Beatles Blog'}]>
+6) what is REST API or restful APIs- representational state transfer 
+7) HTTP methods: get(fetch recrd) post(create record) put(replace row) delete  patch(modify row)
+8) rest clients - browser web - app 
+
+
+
+
+

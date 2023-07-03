@@ -1,0 +1,36 @@
+<!-- // document.getElementById()
+// document.getElementsByClassName()
+// document.getElementsByTagName()
+// document.querySelector()
+// document.querySelectorAll() -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Learning JS</title>
+</head>
+<body>
+
+<div id="parent">
+    <div id ="check">this is a div with id</div>
+    <div class="cls">this is a div with class</div>
+    <h1 class="cls">This is a Heading</h1>
+    <p>This is a paragraph 1.</p>    
+    <p>This is a paragraph 2.</p>    
+</div>
+
+<script>
+console.log(document.getElementById('check').innerHTML)
+console.log(document.getElementsByClassName("cls")[1].innerHTML)
+console.log(document.getElementsByTagName('p')[0].innerHTML)
+console.log(document.querySelector('p').innerHTML)
+console.log(document.querySelectorAll('#parent'))
+var elements = document.getElementById("parent").querySelectorAll()
+Console.log(elements.length)
+var le = elements.length
+for(var i=0;i<le;i++){
+    console.log("--", elements[i].innerHTML)
+}
+</script>
+</body>
+</html>

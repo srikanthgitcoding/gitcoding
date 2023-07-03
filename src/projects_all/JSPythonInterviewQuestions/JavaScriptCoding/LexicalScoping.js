@@ -1,0 +1,1 @@
+// things defiend outside will be available inside

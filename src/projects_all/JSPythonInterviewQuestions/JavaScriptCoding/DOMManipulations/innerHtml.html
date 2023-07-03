@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Learning JS</title>
+</head>
+<body>
+<div>this is a div</div>
+<div>this is a div</div>
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+<div>
+    <div>this is a div</div>
+    <div>this is a div</div>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>    
+</div>
+
+<script>
+var nodelist1 = document.getElementsByTagName("P").length;
+var nodelist2 = document.getElementsByTagName("div").length;
+var nodelist3 = document.getElementsByTagName("h1").length;
+
+
+var bodyElements = document.body.getElementsByTagName("*")
+console.log(bodyElements)
+
+var l = document.querySelectorAll('div')
+// console.log(l.length)
+// console.log(nodelist1,nodelist2,nodelist3)
+var allElements = document.getElementsByTagName('*') // this will print entire DOM
+var selectAll = document.querySelectorAll('*')
+console.log(selectAll.body())
+// for(var i=0; i<selectAll.length;i++){
+//     console.log(allElements[i])
+// }
+</script>
+</body>
+</html>
