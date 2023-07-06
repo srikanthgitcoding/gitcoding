@@ -1,0 +1,8 @@
+1) console ninja(wallaby.js) -> no need to go to console to see output
+ run ur project in browser and it starts printitng console.logs in vs code it self directly
+
+2)indent rainbow - adds differnt color lines for diff 
+
+3) glean extention - it auto creates component when selct group of code 
+
+2)

@@ -6,6 +6,7 @@ function B({userData,modifyUserData}) {
   return (
     <div>B
         {userData && userData.map((item,index)=>{
+          console.log(item)
             return <div key={index}>{item}</div>
         })}
 
