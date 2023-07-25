@@ -4,6 +4,8 @@ import Index from "./projects_all/oct6th/Index";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CreateOrder from "./projects_all/REACTQUERY/CreateOrder";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
 import Home from "./projects_all/REACTQUERY/Home";
 
 const qclinet = new QueryClient();
@@ -18,6 +20,7 @@ function App() {
           <Route path="/blogs" element={<CreateOrder></CreateOrder>}></Route>
         </Routes>
       </BrowserRouter>
+      <ReactQueryDevtools></ReactQueryDevtools>
     </QueryClientProvider>
   );
 }

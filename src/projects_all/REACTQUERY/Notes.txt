@@ -1,0 +1,114 @@
+1) what is react query - ? it is library for fetching data in react application
+2) client state - persist in your app memeory(like localstorage or redux store) and accessing or updating it is synchronous
+3) server state - persist remotly(typiccly data base) and requires asynchronous APIS for fetching updating data 
+4) 
+
+
+React query -
+
+1) yarn add react-query 
+2) add react query to our application parent component - import {queryclinet,queryClientProvider} from 'react-query; 
+3) wrap ur application with <queryClientProvider> <App /> </queryClientProvider>
+4) create an instance of queryclient class out side function - const queryClient = new queryClient()
+5) finally on query client provider add a prop client set it to qc instance -  client= {queryClient}
+
+DATA FEethcing - 
+-----------------
+6) import {useQuery} from 'react-query - we need this for all data ftehcing needs 
+7) call this hook and it accepts 2 arguments useQuery(unique key to identify this query(this is similar how we have diff id for each row in db), it accepts a fn that returns a promise)- 
+useQuery("key name", ()=>{ } ,3rd arg is cahetime=500)
+default cachetime is 5 minute
+default stale time is 0 sec 
+
+8) usequery return all data u need such as {isaloding, data, error,isError,isFetching} - here we dont have to manage state variables such as one useState for data, one for error, one for isloading
+
+CACHIng how it works with react query - 
+---------------------------------------
+imp:on every reload it makes api call but switching bw routes makes call only once,and, rest uses from cache
+1) the first time when u call an API is loading will be true from next time if u call same API, is loading will not be true only is fetching will be true(because it refers to cache data if it is expired it makes a call else uses the same and makes a cal in the bg to see if data changed in this case isloading will be false isfteching will be true)
+2) cache time - query cache time is 5 minute with five minutes 
+3) loading will not be true if cached data is available 
+
+
+you might be wondering how this calls are interanlly made ?
+
+react-query dev tools? how to add to your project
+---------------------------------------------------
+
+1) import  {ReactQueryDevtools} from 'react-query/devtolls
+2) before closing queryClientProvider tag include this component <ReactQueryDevtools initialISOpen={false - u dont want to open dev tools as soon page loads} positin="bottom-right' />
+3) in browser click on flower icon it contains 4 badges, fresh fteching stale inactive 
+
+what is stale time ?
+--------------------
+endpoint - product/list 
+when u think the abouve end point data doesnt change often say pin a day once or so, even if it changes it is ok
+user will se stale data perhaps for 30 secs 
+add staleTime propertie to useQuery hook 
+useQuery("keyname", callbackfn, { staleTime : 30000 //30 sec})
+
+the data remains frsh untill 30 sec,(isloading and fteching remian false untill 30 sec) after 30 sec u swithc to other tab and come back the product tab it trigger network call 
+
+however, within 30 sec if u swithc back and forth to other tab and comeback product tab it doesnt male any call
+
+it makes call after 30 sec and only when component is rendered again 
+Note: after stale time u get the latest data u have to reload page or swithc to diff page and come back 
+
+REFETCH DEFAULTS:
+-------------------
+
+useQuery("key", callbackfn , {refetchOnMount:true}) - kind of first time page loads 
+useQuery("key", callbackfn , {refetchOnMount:false}) - fetch false trigger call on first time 
+component renders rest it doesnt call
+
+useQuery("key", callbackfn , {refetchOnWindowFocus:true}) - evrytime when u go to different tab inchrom (alt+tab doesnt work) and comback data reloads by making a cal 
+
+Dfeault values of useQuery
+--------------------------
+
+useQuery("key", callbackfn , {
+    cachetime:5min,  
+    staleTime: 0,
+    refetchOnMount:true, 
+    refetchOnWindowFocus:true,
+    refetchInterval:false
+    refetchIntervalInBackground:false
+})
+react-query polling -
+---------------------
+
+fetching data at regular intervals  - 
+refetchInterval:false , 0sec, 2 sec ,5 sec , when u want trigger api call evry certain interval use this 
+Note:polling will stop when winodw losses focus 
+however if u want data to be trigger evry 2 sec irrespective of window focus, use refetchIntervalInBackground:true
+
+Imagine writing all this code by yourself 
+
+useQueryonclikc
+-----------------
+
+const {refetch } = useQuery("key", "callbackfn", enabled:"false")
+
+<button onclick={refetch}>
+
+ONsuccess and on error 
+---------------------
+usequery("key", "callbackfn", {
+    onSuccess:callabckOnsucess, 
+    onError :callbackOnError
+})
+
+data transformation
+--------------------
+say ur api response like this - 
+
+products = [ {pname:"sri",pID:0},{pID:2,pname:"kanth}]
+what if u want only list of names into array - ["sri","kanth"]
+
+const {data} = useQuery("key","callbackfn", {
+    select:(data)=>{
+        data.map((item)=> item.pname) - ["",""]
+    }
+})
+
+now data will be [""] not [{}]
