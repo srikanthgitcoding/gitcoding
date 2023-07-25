@@ -58,7 +58,6 @@ var arr =[
    if(typeof obj1 === 'object' && obj1 !== null){
       
    }
-
  }
 
  fn(obj)

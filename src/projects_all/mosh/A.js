@@ -1,7 +1,10 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect,useContext } from "react";
 import B from "./B";
+import {MyContext} from './IndexM'
 
 function A() {
+  const {terminalName} = useContext(MyContext)
+  console.log("terminalName",terminalName)
   const [count, setCount] = useState(0);
   const [userData, setUserData] = useState(["srikanth"]);
   const [first, setfirst] = useState(0);
@@ -27,6 +30,7 @@ function A() {
 
   return (
     <div>
+    I am adding context here - {terminalName}
       <B userData={userData} modifyUserData={modifyUserData}></B>
       <div>
         count - {count}
