@@ -27,6 +27,7 @@ var f = a || b || c || d || e;
 
 
 
+
 //------------------------------------------------
 
 
@@ -39,7 +40,42 @@ if (process.env.DB_HOST) {
   dbHost = 'localhost';
 }
 
-const dbHost = process.env.DB_HOST || 'localhost';
+// const dbHost = process.env.DB_HOST || 'localhost';
 
 
 //---------------------------------------------------
+
+var emptyString = "" //returns fasly value
+
+var zeroNumber = 0 // return falsy value
+var oneNumber = 1 // returns truthy value
+var minuszeroNumber = -0 // return falsy value
+
+var undefineCheck; // return falsy value
+var undefineCheck1 = undefined // // return falsy value
+var nullCheck = null // // return falsy value
+
+var obj = {} // if(obj) gives truthy value  //Object.keys(obj).length gives false value
+
+if(obj){ // this always returns truthy value irrespective of empty object,{} or with keys,{key:1}
+    console.log("this gets executed")
+}else console.log("empty")
+
+if(Object.keys(obj).length){
+    console.log("if length is not zero this gets excuted")
+}else{
+    console.log("if length is  zero this gets excuted")
+
+}
+//array
+var arr = [] // if(arr) gives truthy value //arr.length gives false value since it is zero
+// Array.isArray(emptyArray) && emptyArray.length
+var arr1 = [1]
+
+console.log(!!arr1.length)
+
+if(Object.keys(obj).length){
+  console.log("empty array")
+}else{
+  console.log("non empty array")
+}

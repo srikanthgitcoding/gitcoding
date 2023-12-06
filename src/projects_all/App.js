@@ -9,7 +9,7 @@ import MUICard from './MaterialUI/MUIComponents/MUICard';
 import MUIToggleButton from './MaterialUI/MUIComponents/MUIToggleButton';
 import AdminApp from './ADMINDASHBOARD/AdminApp';
 import APP from './REACTREDUXPROJECT/APP'
-import MemoDemo from './CallBackMemo.js/MemoDemo';
+import MemoDemo from './CallBackMemojs/MemoDemo';
 import EffectMistakes from './EffectMistakes/EffectMistakes';
 import FindMethod from './EffectMistakes/FindMethod';
 import CRUD from './CommonLearnings/CRUD';

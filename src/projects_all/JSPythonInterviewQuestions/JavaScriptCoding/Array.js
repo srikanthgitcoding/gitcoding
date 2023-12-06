@@ -28,4 +28,3 @@ console.log("---", f, typeof(f))
 for (let i in fruits){
     console.log("--", i)
 }
-arr.

@@ -1,13 +1,9 @@
-function fn(){
-var arr = [1,2,3,4,4,5,5]
-var noDuplicates = []
-arr.forEach((item,index)=>{
-if(!(noDuplicates.indexOf(item) >-1)){
-    noDuplicates.push(item)
-}
-})
-console.log(noDuplicates)
+var a; // undefined (falsy value)
+var b = null; // null (falsy value)
+var c = undefined; //undefined (falsy value)
+var d = 0; // number (NOT falsy)
+var e = 'five'; // assigment short circuits before reaching here
 
-}
+var f = a || b || c || d || e;
 
-fn()
+console.log(f)

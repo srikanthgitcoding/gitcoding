@@ -20,4 +20,11 @@ function products<T>(obj :T):T{
     return obj
 }
 
+
 products<IProduct>(productsvalues)
+
+
+function fn111<T extends {}>(obj:Array<T>):Array<T>{
+return [...obj]
+}
+fn111<IProduct>([...productsvalues])

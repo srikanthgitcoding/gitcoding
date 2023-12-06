@@ -39,8 +39,8 @@ console.log("objAss", objAss);
 console.log("objAssCopy", objAssCopy);
 
 // if u copy using object.assign
-//1) original changes will nort effect copied and vise versa- one level not nested
-//2) nested objected changes vice versa o change effect copy, copy change effects obj
+//1) original changes will nort effect copied and vise versa- one level, not nested
+//2) nested objected changes vice versa original change effect copy, copy change effects obj
 
 // JSON.parse();
 // JSON.stringify(); //- //it converts js object to string

@@ -8,4 +8,3 @@ const calculate =((total, currentValue, currentIndex, arr)=>{
     total, currentValue, currentIndex, arr)
 })
 arr.reduce(calculate)
-

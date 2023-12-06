@@ -17,6 +17,9 @@ import ChangeAllinputsWithSingleState from "../CommonLearnings/ChangeAllinputsWi
 import IndexM from "../mosh/IndexM";
 import IndexReactQuery from "../REACTQUERY/Index";
 import { Outlet, Link } from "react-router-dom";
+import CustomHookOptimization from "../CustomHooks/Index";
+import Test1 from "../CustomHooks/Test1";
+import FormUsecallBackExample from "./Form";
 
 function Index() {
   const [arrList, setArrList] = useState();
@@ -35,6 +38,10 @@ function Index() {
       {/* <IndexRefernce></IndexRefernce> */}
       {/* <Toggle></Toggle> */}
       {/* <IndexM></IndexM> */}
+      {/* <CustomHookOptimization></CustomHookOptimization><br/><br/> */}
+      {/* <Test1></Test1> */}
+      {/* <FormUsecallBackExample></FormUsecallBackExample> */}
+
       <nav>
         <ul>
           <li>
@@ -46,6 +53,16 @@ function Index() {
           <li>
             <Link to="/contact">Contact</Link>
           </li>
+          <li>
+            <Link to="/onmount">mount</Link>
+          </li>
+          <li>
+            <Link to="/buttonclick">button click</Link>
+          </li>
+          <li>
+            <Link to="/dynamic"> dynamic</Link>
+          </li>
+          
         </ul>
       </nav>
     </div>

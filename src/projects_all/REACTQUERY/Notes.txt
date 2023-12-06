@@ -25,7 +25,7 @@ default stale time is 0 sec
 CACHIng how it works with react query - 
 ---------------------------------------
 imp:on every reload it makes api call but switching bw routes makes call only once,and, rest uses from cache
-1) the first time when u call an API is loading will be true from next time if u call same API, is loading will not be true only is fetching will be true(because it refers to cache data if it is expired it makes a call else uses the same and makes a cal in the bg to see if data changed in this case isloading will be false isfteching will be true)
+1) the first time when u call an API is loading will be true from next time if u call same API(api will be called switching bw tabs), is loading will not be true only is fetching will be true(because it refers to cache data if it is expired it makes a call else uses the same and makes a cal in the bg to see if data changed in this case isloading will be false isfteching will be true)
 2) cache time - query cache time is 5 minute with five minutes 
 3) loading will not be true if cached data is available 
 
@@ -57,8 +57,8 @@ Note: after stale time u get the latest data u have to reload page or swithc to 
 REFETCH DEFAULTS:
 -------------------
 
-useQuery("key", callbackfn , {refetchOnMount:true}) - kind of first time page loads 
-useQuery("key", callbackfn , {refetchOnMount:false}) - fetch false trigger call on first time 
+useQuery("key", callbackfn , {refetchOnMount:true}) - kind of evrytime component renders 
+useQuery("key", callbackfn , {refetchOnMount:false}) - fetch false trigger call on first time (when initial page loads )
 component renders rest it doesnt call
 
 useQuery("key", callbackfn , {refetchOnWindowFocus:true}) - evrytime when u go to different tab inchrom (alt+tab doesnt work) and comback data reloads by making a cal 
@@ -71,8 +71,8 @@ useQuery("key", callbackfn , {
     staleTime: 0,
     refetchOnMount:true, 
     refetchOnWindowFocus:true,
-    refetchInterval:false
-    refetchIntervalInBackground:false
+    refetchInterval:false,(it sets actual interval)
+    refetchIntervalInBackground:false(this is just true or false that it)
 })
 react-query polling -
 ---------------------
@@ -107,8 +107,8 @@ what if u want only list of names into array - ["sri","kanth"]
 
 const {data} = useQuery("key","callbackfn", {
     select:(data)=>{
-        data.map((item)=> item.pname) - ["",""]
+        data.map((item)=> item.pname) - returns ["sri","kanth"]
     }
 })
 
-now data will be [""] not [{}]
+now data will be  ["sri","kanth"] not [ {pname:"sri",pID:0},{pID:2,pname:"kanth}]

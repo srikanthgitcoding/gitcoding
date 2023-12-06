@@ -1,37 +1,32 @@
-import React,{useState} from "react";
-import {useQuery} from 'react-query'
-import axios from "axios";
+import React from 'react'
+import { useQuery } from 'react-query'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
 
-const apicall=()=>{
-return axios.get('https://jsonplaceholder.typicode.com/todos/')
+const callbackfn =()=>{
+return axios.get("https://jsonplaceholder.typicode.com/todos")
 }
-var count = 0
 
 function Home() {
-  const [timer,setTimer] = useState(3000)
-  const onSuccessCallback =(data,refetchInterval,refetchOnMount)=>{
-    count++
-    console.log("count",count)
-
-    if(count === 3){
-      setTimer(0)
-    }
-console.log("suces",data)
+  const {data,isError,isLoading,isFetching,cachetime,refetch:OnclickButton} = useQuery("key", callbackfn,{refetchOnMount:true})
+  if(isLoading){
+    return <>loading please wait .....</>
   }
-  const onError =(error)=>{
-    console.log("error",data)
-      }
-
-const {isLoading,data,isError,error,isFetching,refetch : clickME,refetchInterval,refetchOnMount} = useQuery("sample",apicall,{enabled:true,onSuccess:onSuccessCallback,onError,refetchOnMount:true,refetchInterval:timer})
-if(isLoading){
-    return <div>Loading</div>
+  if(isFetching){
+    return <>fetching please wait .....</>
+  }
+  if(isError){
+    <>there is an error</>
+  }
+  return (
+    <div>
+    call is succesfull
+    {
+  data?.data?.map((obj)=><div><Link to={`/singleproduct/${obj.id}`}> {obj.title}</Link></div>)
+    }
+    <button onClick={()=>OnclickButton()}>clikc me to make call</button>
+    </div>
+  )
 }
 
-  return <div>
-  <button onClick={clickME}>CLICK HER ME CALL</button>
-  {
-    data?.data?.map((item)=><div>{item.title}</div>)
-    }</div>;
-}
-
-export default Home;
+export default Home

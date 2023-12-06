@@ -1,0 +1,7 @@
+Big -O  
+
+Calculation not depended on input size BIg O(1)
+
+1 loop - Big O(n) - linear 
+ 2nested loops BIG O(n^2) -
+ input size reduce by hald - O(logn)
