@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, {createContext, useContext } from 'react'
 const CreatecontextData = React.createContext<{name:string}>({name:""})
 
 function Index() {

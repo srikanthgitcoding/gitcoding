@@ -17,3 +17,10 @@ while (arr.length > 0){
 
 
 console.log(new_arr)
+
+
+
+var arr=[1,3,42,3,2,12,2,2,21,1,10,0,111]
+
+
+

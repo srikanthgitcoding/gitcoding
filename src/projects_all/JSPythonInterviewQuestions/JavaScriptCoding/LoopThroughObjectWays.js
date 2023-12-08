@@ -9,8 +9,8 @@ var getLengthOfObject = Object.keys(dict).length
  }
 
 //2
- for(i in dict){
-    console.log(dict[i])
+ for(key in dict){
+    console.log("in operator",key)
  }
 
  //For-of with Object.keys() alternative:

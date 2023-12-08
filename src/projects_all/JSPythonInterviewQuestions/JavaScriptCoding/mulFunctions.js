@@ -6,3 +6,5 @@ function a(x){
     }
 }
 console.log(a(10)(20)(30)) 
+
+

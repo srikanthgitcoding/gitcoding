@@ -4,5 +4,5 @@ var arr = [
     {name:"manisha",indicator:"Y"},
 ]
 
-var findmethd = arr.find(({name})=>name == "srikanth")?.indicator
+var findmethd = arr.find(({name})=>name == "srikanth")?.name
 console.log(findmethd)

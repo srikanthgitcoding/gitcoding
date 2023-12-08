@@ -37,6 +37,6 @@ var name1 = 0;
 var fallback = name1 ?? "fallback name";
 console.log(fallback); //0
 
-// empty string and 0 considered to be false value so fallback code executes
+// empty string and 0,undefined,null,-0,false considered to be false value so fallback code executes
 
 // to avoid this we use nullish coalising value - it evealutes only to null or undefined

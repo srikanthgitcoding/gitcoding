@@ -1,17 +1,17 @@
-var arr =[1,2,3,4,5,6]
+var arr =["sri","kant","th","mot","kuri"]
 
 //#1
 for (var i=0; i< arr.length; i++){
     console.log(arr[i])
 }
 //#2
-for (i of arr){
-    console.log(i)
+for (item of arr){
+    console.log("value",item)
 }
 
 // #3
-arr.map((i)=>{console.log("-",i)})
+arr.map((item)=>{console.log("-",item)})
 
-arr.forEach((value,index)=>{
+arr.forEach((item,index)=>{
     
 })

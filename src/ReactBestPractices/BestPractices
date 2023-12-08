@@ -1,0 +1,67 @@
+--------JSX short hand for passing boolean variables-------------------------------------------
+
+this - return (
+    <Component showorHide={true}>
+)
+To -
+this - return (
+    <Component showorHide>
+)
+
+--------use framgments over div-------------------------------------------
+
+this - return (
+    <div>
+    <Header>
+    <Main>
+    </div>
+)
+to -
+return (
+    <>
+    <Header>
+    <Main>
+    </>
+)
+
+---------------use object destructing------------------------------------
+from this - 
+return (
+    <div>{details.name}</div>
+        <div>{details.age}</div>
+
+)
+
+to:
+const {name,age} = details
+return (
+    <div>{name}</div>
+        <div>{age}</div>
+
+)
+------------use hooks over class based component---------------------------------------
+
+
+-------------u can use self closing tag if component doesnt have a children props--------------------------------------
+
+from this - return(
+    <Header></Header>
+)
+to - return(
+    <Header/>
+)
+
+------dont use else block if if block retruns something----------
+from this -
+
+if(status){
+    return <User />
+}else{
+    return <Login />
+}
+
+To :
+if(status){
+    return <User />
+}
+return <Login />
