@@ -1,0 +1,27 @@
+As a Counter Clerk,  I do not want to see buttons, icons or menu options for Product Journeys that are not 
+available in my branch - How do I know Product journey is enable or disabled for a branch - how do I get this data ?
+
+Acceptance Criteria
+
+Case 1: Estimated Delivery Date enabled
+
+My branch has been configured to Estimated Delivery Date
+
+On various screens I can see options to trigger Estimated Delivery Date 
+
+When I trigger Estimated Delivery Date, I can complete the Estimated Delivery Date journey
+
+Case 2:Estimated Delivery Date disabled
+
+My branch has been configured not to supportEstimated Delivery Date
+
+I can see no options to trigger Estimated Delivery Date on any screen 
+
+I cannot trigger Estimated Delivery Date by any means
+
+Additional Information
+
+There is a generic requirement (on another team) to enable the management of what product journeys are available in a branch.
+ This is likely reference data driven. 
+ The (somewhat broken) mechanism, for Horizon, is to distinguish ‘core’ products from ‘non-core’ products. For the latter ‘non-core links' are created 
+ between the product and every branch that takes that product.

@@ -2,7 +2,7 @@ function identity<T>(input:T):T{
 return input
 }
 type Obj ={name:string}
-type arr =string[]
+type arr ={}[]
 
 
 identity<string>("23")
@@ -38,7 +38,7 @@ interface fullName<T extends Record<string,string>, L extends Record<string,stri
 
 }
 
-let ful:fullName<fname,string>={}
+let ful:fullName<fname<string>,lname<string>>={}
 
 //example 3
 interface Error{

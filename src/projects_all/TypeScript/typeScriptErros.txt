@@ -1,0 +1,13 @@
+1)
+error : props implicirtly has any type: suggested though or indirectly specified any - u have to directly specify - u didnt specify it has been implicitly specified
+fix : add type explicitly
+-----------------------------------------------
+2) 
+ERROR: TYPE number is not assignable to type string
+fix : variable expects a "string" but u added a number
+-------------------------------------------------
+3)
+
+
+
+

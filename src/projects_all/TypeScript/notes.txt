@@ -1,0 +1,88 @@
+1)
+------------------------
+expoert default Test{
+    //some data
+}
+import Test from '.filename'
+-----------------------------
+2)
+
+expoert default {
+    //some data
+}
+import  anyName from '.filename'
+
+----------------------------------
+3)
+
+FC - fucntional component 
+useStae("")- use state with empty string - how do we add string type ?
+useState<String("")
+const [data, setData] = useStae<number>(0) 
+-------------------------
+4)
+const changeData = (event) => {} - js way
+import {ChangeEvent} from 'react'
+const changeData = (event: ChangeEvent(this is of type change event)<HTMLInputElement(this is to determine we r changing an html element)> ) => {
+
+    setData(event.target.value) - //this thoes erro bcz it has a type number but the value returned from input is string how do we make thisd work
+    setData(Number(event.target.value))
+} - ts way // 
+
+<input onChange={changeData} >
+
+------------------------------------
+5) 
+If a function not returning anything just add return type as void
+ex: const fn = (): void =>{
+}
+---------------------------------------
+6)
+interface Itask {
+    name : string,
+    lastname : string
+}
+
+const [state, setState] = useState<Itask[]>([]) // useState is of type array -which is Itask array -
+
+if we have string array - useState<string[]>([])
+
+----------------------------------------
+7)
+
+const childMethod = ():void =>{
+return ccc
+}
+<Child choldMethod ={childMethod} >
+in child component 
+
+interface props {
+    name : string,
+    choldMethod( parameter : type) : void 
+}
+
+const method = ( {name, childMethod} :props) {
+<button onclick ={(e) => childMethod(name)}>X</button
+}
+----------------------------------------
+
+8)
+type Assertions{
+    name : string
+} 
+we use types asseriotn wich is "as" useState<Assertions>({} as Assertions)
+
+9)
+----------------------------------------
+useReducer u can use for complex logic like when ur next state depends on ur previous state
+Project
+10)
+<> angle brackets
+
+--------------------------
+in fixures folder all .ts file cintains objects or arrays or default exports
+
+
+
+
+
