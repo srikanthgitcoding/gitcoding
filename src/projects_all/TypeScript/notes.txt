@@ -81,8 +81,3 @@ Project
 
 --------------------------
 in fixures folder all .ts file cintains objects or arrays or default exports
-
-
-
-
-

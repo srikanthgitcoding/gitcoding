@@ -1,6 +1,0 @@
-1) create the the code which make an api call
-2) 
-
-1) first in ficure create a .ts file and add the nodes - done - in enabler name copy and add in enablers file
-2) in enablers folder in index.ts  - in that copy 
-3) in diaptch folder index.ts file 

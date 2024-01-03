@@ -151,3 +151,30 @@ interface person {
 interface persons extends Array<person>{}
 
 type personsType = person[];
+
+
+type arr = string[]
+type arr1 = Array<string>
+
+type familyMemebers = "MOM" | "DAD"
+type familyMemberDetails = "name" 
+type families = {
+    famili1 : {
+        [key in familyMemebers]: {
+            [key in familyMemberDetails] : string | number
+        }
+    }
+}
+
+
+const f:families ={
+    famili1:{
+        "MOM":{
+            "name":""
+        },
+        "DAD":{
+            "name":""
+        }
+    }
+}
+
