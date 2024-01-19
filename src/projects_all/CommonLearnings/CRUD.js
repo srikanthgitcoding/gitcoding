@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
-function CRUD() {const [first, setfirst] = useState("")
+function CRUD() {
+    const [first, setfirst] = useState("")
     const [data, setData] = useState([])
     const [message, setMessage] = useState("")
     const submitForm = (e) =>{
@@ -22,6 +23,7 @@ function CRUD() {const [first, setfirst] = useState("")
         })
         setData(newData)
     }
+
   return (
     <div>
     {message}
@@ -31,7 +33,7 @@ function CRUD() {const [first, setfirst] = useState("")
         </form>
 
         {
-            data.length === 0 ? <div>list is empty Add some data</div> : data.map((e)=>{
+            !!data.length ? <div>list is empty Add some data</div> : data.map((e)=>{
                 return <div>{e}<span onClick={() =>removeElement(e)}>Remove me</span></div>
             }) 
         }

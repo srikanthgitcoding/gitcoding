@@ -1,4 +1,4 @@
-for (let i = 1; i <= 3; i++) {
+for (var i = 1; i <= 3; i++) {
     (function(index){
         setTimeout(function() { 
             console.log(index); 

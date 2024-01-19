@@ -1,10 +1,5 @@
-function test11(){
-    console.log("test11")
-    }
-function fnnn(){
-console.log("fnnn")
+const data = function name(){
+    return "test"
 }
 
-
-fnnn(test11())
-
+console.log(data())

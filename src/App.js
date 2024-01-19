@@ -31,12 +31,8 @@ function App() {
           <Route path="/blogs" element={<CreateOrder></CreateOrder>}></Route>
           <Route path="/onmount" element={<OnMountFetch></OnMountFetch>}></Route>
           <Route path="/buttonclick" element={<OnButtonClickFetch></OnButtonClickFetch>}></Route>
-          
           <Route path="/dynamic" element={<DynamicParalleExample ids={[1,2,3]}></DynamicParalleExample>}>
-          
           </Route>
-
-
         </Routes>
       </BrowserRouter>
       {/* <GetCAllWIthTypes></GetCAllWIthTypes> */}

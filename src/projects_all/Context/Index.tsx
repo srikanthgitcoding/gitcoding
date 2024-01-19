@@ -1,5 +1,5 @@
 import React, {createContext, useContext } from 'react'
-const CreatecontextData = React.createContext<{name:string}>({name:""})
+const CreatecontextData = React.createContext<{name:string} | null>(null)
 
 function Index() {
   return (
@@ -10,7 +10,11 @@ function Index() {
 }
 
 function Consumer(){
-    const {name} = useContext(CreatecontextData)
+    const context = useContext(CreatecontextData)
+    if(!context){
+      throw new Error("error")
+    }
+    return context
 }
 
 export default Index
