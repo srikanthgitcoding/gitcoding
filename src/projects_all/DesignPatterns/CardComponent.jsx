@@ -15,9 +15,9 @@ const CardImage = ({src,alt,width,height}) => {
     )
   }
 
-const CardContent = () => {
+const CardContent = ({somName, children}) => {
     return (
-      <div>Card content</div>
+      <div>{somName}- {children} -Card content</div>
     )
   }
 
@@ -36,10 +36,10 @@ export const CardComponent = () => {
     <div>
       <Card>
         <CardImage width="20px" height="20px" src="https://media.istockphoto.com/id/1382384282/photo/bangalore-or-bengaluru.jpg?s=612x612&w=0&k=20&c=6pxwL3JxNV2B_NZSLMZLhrSLqAbyCPlGuSZYKImpjKQ=" alt="phottography"/>
-        <CardContent>
+        <CardContent somName={"srikanth"}>
             <h2>Card content is so big</h2>
         </CardContent>
-        <CardActions>
+        <CardActions >
             <button onClick={curryingExample("srikanth")}>save button</button>
             <button>cancel button</button>
         </CardActions>

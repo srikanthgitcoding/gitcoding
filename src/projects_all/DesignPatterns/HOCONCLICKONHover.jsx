@@ -35,7 +35,7 @@ const HOCComponent =(NewComponent,incrementBy)=>{
 export const EnhancedComp = ()=>{
      const EnhancedOnclick = HOCComponent(OnclickExample,5)
     const EnhancedOnMouse = HOCComponent(OnHoverExample,10)
-    return ( <div>
+    return (<div>
         <EnhancedOnclick/>
         <EnhancedOnMouse/>
     </div>
