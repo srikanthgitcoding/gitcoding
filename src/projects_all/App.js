@@ -65,6 +65,7 @@ function App() {
     {/* <Index></Index> */}
     {/* <ChangeAllinputsWithSingleState></ChangeAllinputsWithSingleState> */}
     <IndexM></IndexM>
+    
     </div>
   );
 }

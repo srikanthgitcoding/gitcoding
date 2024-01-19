@@ -1,18 +1,20 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import EMailInput from './EMailInput'
 import PasswordInput from './PasswordInput'
+import { callbackify } from 'util'
 
 
 const FormUsecallBackExample:React.FC = () => {
     const [email,setEmail] =useState<string>("")
     const [password,setPassword] =useState<string>("")
-    const setemailfn =(value:string)=>{
+    
+    const setemailfn =useCallback((value:string)=>{
         setEmail(value)
-    }
+    },[email])
 
-    const setpasswordfn =(value:string)=>{
+    const setpasswordfn =useCallback((value:string)=>{
         setPassword(value)
-    }
+    },[password])
   return (
     <div>
       <EMailInput value={email} onChange={setemailfn}></EMailInput>

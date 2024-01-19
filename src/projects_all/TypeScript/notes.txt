@@ -17,7 +17,7 @@ import  anyName from '.filename'
 
 FC - fucntional component 
 useStae("")- use state with empty string - how do we add string type ?
-useState<String("")
+useState<string>("")
 const [data, setData] = useStae<number>(0) 
 -------------------------
 4)
@@ -51,7 +51,7 @@ if we have string array - useState<string[]>([])
 7)
 
 const childMethod = ():void =>{
-return ccc
+//
 }
 <Child choldMethod ={childMethod} >
 in child component 

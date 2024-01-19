@@ -15,7 +15,7 @@
 
 // export default EffectMistakes
 // the above code throws this error - A component is changing an uncontrolled input to be controlled.
-// to resolve -   const [name, setname] = useState("change her to an empty string")
+// to resolve -   const [name, setname] = useState("change here to an empty string")
 
 import React, { useEffect, useState, useMemo } from 'react'
 

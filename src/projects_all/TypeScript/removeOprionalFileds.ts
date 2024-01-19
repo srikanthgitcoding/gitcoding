@@ -8,5 +8,5 @@ type details ={
 type removeOptional<T> = {
     [property in keyof T]-? : T[property]
 }
-
+//by using " -? " we add tha its a non optioanl field
 type n = removeOptional<details>

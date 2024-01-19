@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Index() {
+function TankQuality() {
   return (
     <div>Index tank quality</div>
   )
 }
 
-export default Index
+export default TankQuality

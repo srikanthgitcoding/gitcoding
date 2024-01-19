@@ -14,6 +14,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 
 import Home from "./projects_all/REACTQUERY/Home";
+import GetCAllWIthTypes from "./projects_all/TypeScript/GetCAllWIthTypes.tsx";
 
 const qclinet = new QueryClient();
 
@@ -38,6 +39,7 @@ function App() {
 
         </Routes>
       </BrowserRouter>
+      {/* <GetCAllWIthTypes></GetCAllWIthTypes> */}
       <ReactQueryDevtools></ReactQueryDevtools>
     </QueryClientProvider>
   );

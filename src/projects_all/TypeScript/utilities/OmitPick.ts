@@ -12,7 +12,6 @@ type excludeEmailID = Exclude<Iproduct , "ShellEmailID">
 
 
 
-
 function fn(props:omitEmailID){
 }
 const prodtcDetails:excludeEmailID= {

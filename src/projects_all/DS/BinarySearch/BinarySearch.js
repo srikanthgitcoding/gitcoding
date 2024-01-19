@@ -1,5 +1,6 @@
 
 function Binary(arr,t,start,end){
+    console.log(start,end)
 
     if(arr.length == 0){
         return -1
@@ -21,13 +22,13 @@ function Binary(arr,t,start,end){
     
 
     if(arr[middleIndex] > t){
-        return Binary(arr,t,startIndex,middleIndex)
+        return Binary(arr,t,startIndex, middleIndex-1)
     }else{
         return Binary(arr,t,middleIndex+1,endIndex)
     }
 }
 
 
-let arr =[1,2,3,4,5,6,7,8,9,10]
+let arr =[10,11]
 
-console.log(Binary(arr,2,0,arr[arr.length-1]))
+console.log(Binary(arr,13,0,arr.length-1))

@@ -14,4 +14,4 @@ const EMailInput:React.FC<Iprops>= ({value,onChange}):JSX.Element => {
   )
 }
 
-export default EMailInput
+export default React.memo(EMailInput)

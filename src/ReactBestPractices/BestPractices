@@ -19,7 +19,7 @@ this - return (
 to -
 return (
     <>
-    <Header>
+    <console.log>
     <Main>
     </>
 )
@@ -65,3 +65,23 @@ if(status){
     return <User />
 }
 return <Login />
+
+----------------------------
+
+
+//babel converts modern js code to old code 
+//Polyfills are pieces of code that provide modern functionality to
+// older browsers that lack native support for those features.
+
+// internally this will be handled by core-js files 
+
+// poly fill example writing modern code which supports old browsers
+
+var arr = [1,2,3,4]
+var arr1 = [11,12,13,14]
+
+{/* Array.prototype.at = function(index){
+    return this[index]
+} // this particular peice of code will come from standard tool called core js, we dont have to manually write it  */}
+
+{/* //console.log(arr1.at(3)) */}

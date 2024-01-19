@@ -19,13 +19,14 @@ DATA FEethcing -
 useQuery("key name", ()=>{ } ,3rd arg is cahetime=500)
 default cachetime is 5 minute
 default stale time is 0 sec 
+default enabled is true, which means as soon as page loads API gets triggered.
 
 8) usequery return all data u need such as {isaloding, data, error,isError,isFetching} - here we dont have to manage state variables such as one useState for data, one for error, one for isloading
 
 CACHIng how it works with react query - 
 ---------------------------------------
 imp:on every reload it makes api call but switching bw routes makes call only once,and, rest uses from cache
-1) the first time when u call an API is loading will be true from next time if u call same API(api will be called switching bw tabs), is loading will not be true only is fetching will be true(because it refers to cache data if it is expired it makes a call else uses the same and makes a cal in the bg to see if data changed in this case isloading will be false isfteching will be true)
+1) the first time when u call an API is loading will be true, and from next time if u call the same API(api will be called switching bw tabs), is loading will not be true only is fetching will be true(because it refers to cache data if it is expired it makes a call else uses the same and makes a cal in the bg to see if data changed in this case isloading will be false isfteching will be true)
 2) cache time - query cache time is 5 minute with five minutes 
 3) loading will not be true if cached data is available 
 

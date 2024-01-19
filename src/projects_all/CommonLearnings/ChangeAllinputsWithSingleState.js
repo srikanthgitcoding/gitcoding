@@ -7,7 +7,7 @@ function ChangeAllinputsWithSingleState() {
         fullnmae:""
     })
     const changeInput=(e)=>{
-        setUserDetails(prev=>({...prev,[e.target.name]:e.target.value}))
+        setUserDetails({...userDetails,[e.target.name]:e.target.value})
     }
     console.log(userDetails)
 

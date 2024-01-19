@@ -14,4 +14,4 @@ const PasswordInput:React.FC<Iprops>= ({value,onChange}) => {
   )
 }
 
-export default PasswordInput
+export default React.memo(PasswordInput)

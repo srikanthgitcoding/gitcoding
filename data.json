@@ -1,0 +1,122 @@
+{
+    "results": [
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Vehicles",
+        "question": "Which of the following car manufacturers had a war named after it?",
+        "correct_answer": "Toyota",
+        "incorrect_answers": [
+          "Honda",
+          "Ford",
+          "Volkswagen"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "hard",
+        "category": "Art",
+        "question": "How many paint and pastel versions of The Scream is Norwegian painter Edvard Munch believed to have produced?",
+        "correct_answer": "4",
+        "incorrect_answers": [
+          "1",
+          "3",
+          "2"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "Who is credited with having created the world&#039;s first video game Easter Egg?",
+        "correct_answer": "Warren Robinett",
+        "incorrect_answers": [
+          "Julius Smith",
+          "Will Crowther",
+          "Don Woods"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Film",
+        "question": "Darth Vader&#039;s famous reveal to Luke is iconic. But which of these is the right one?",
+        "correct_answer": "&quot;No. I am your father.&quot;",
+        "incorrect_answers": [
+          "&quot;Luke, I am your father.&quot;",
+          "&quot;You&#039;re wrong. I am your father.&quot;",
+          "&quot;The truth is that I am your father.&quot;"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Television",
+        "question": "Which of the following was not an actor/actress on the American television show &quot;Saturday Night Live&quot; in Season 42?",
+        "correct_answer": "Tina Fey",
+        "incorrect_answers": [
+          "Mikey Day",
+          "Kate McKinnon",
+          "Sasheer Zamata"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "Who voices the character &quot;Vernon Cherry&quot; in &quot;Red Dead Redemption&quot;?",
+        "correct_answer": "Casey Mongillo",
+        "incorrect_answers": [
+          "Tara Strong",
+          "Troy Baker",
+          "Rob Wiethoff"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Science &amp; Nature",
+        "question": "What is the name of the cognitive bias wherein a person with low ability in a particular skill mistake themselves as being superior?",
+        "correct_answer": "Dunning-Kruger effect",
+        "incorrect_answers": [
+          "Meyers-Briggs effect",
+          "M&uuml;ller-Lyer effect",
+          "Freud-Hall effect"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "History",
+        "question": "Which WWII tank ace is credited with having destroyed the most tanks?",
+        "correct_answer": "Kurt Knispel",
+        "incorrect_answers": [
+          "Michael Wittmann",
+          "Walter Kniep",
+          "Otto Carius"
+        ]
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Entertainment: Video Games",
+        "question": "Which of these is not a character in the game, &quot;Lethal League&quot;?",
+        "correct_answer": "Rex",
+        "incorrect_answers": [
+          "Switch",
+          "Candyman",
+          "Sonata"
+        ]
+      },
+      {
+        "type": "boolean",
+        "difficulty": "easy",
+        "category": "Entertainment: Video Games",
+        "question": "The 2005 video game &quot;Call of Duty 2: Big Red One&quot; is not available on PC.",
+        "correct_answer": "True",
+        "incorrect_answers": [
+          "False"
+        ]
+      }
+    ]
+  }
