@@ -1,0 +1,5 @@
+function windowSlicde(){
+
+}
+
+var arr []

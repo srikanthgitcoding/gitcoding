@@ -9,36 +9,21 @@ import DynamicParalleExample from "./projects_all/REACTQUERY/DynamicParalleExamp
 
 import OnButtonClickFetch from "./projects_all/REACTQUERY/OnButtonClickFetch";
 
-
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 
 import Home from "./projects_all/REACTQUERY/Home";
-import GetCAllWIthTypes from "./projects_all/TypeScript/GetCAllWIthTypes.tsx";
-
-const qclinet = new QueryClient();
-
+import ReRenderIndex from "./projects_all/ReRender/ReRenderIndex";
+const client = new QueryClient();
 function App() {
   return (
-    <QueryClientProvider client={qclinet}>
-      <BrowserRouter>
-
-
-        <Index />
-        <Routes>
-        <Route path="singleproduct/:id" element={<OnSingleButtonFetch></OnSingleButtonFetch>}></Route>
-          <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/blogs" element={<CreateOrder></CreateOrder>}></Route>
-          <Route path="/onmount" element={<OnMountFetch></OnMountFetch>}></Route>
-          <Route path="/buttonclick" element={<OnButtonClickFetch></OnButtonClickFetch>}></Route>
-          <Route path="/dynamic" element={<DynamicParalleExample ids={[1,2,3]}></DynamicParalleExample>}>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-      {/* <GetCAllWIthTypes></GetCAllWIthTypes> */}
-      <ReactQueryDevtools></ReactQueryDevtools>
-    </QueryClientProvider>
+    <div>
+      <QueryClientProvider client={client}>
+        <ReRenderIndex />
+        <ReactQueryDevtools initialIsOpen></ReactQueryDevtools>
+      </QueryClientProvider>
+    </div>
   );
 }
- 
+
 export default App;
