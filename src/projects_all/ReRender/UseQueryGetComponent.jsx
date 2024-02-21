@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useRef } from "react";
 import PostCall from "./PostCall";
+import Example from "./RefWithDiv";
 import useQueryGet from "./useQueryGet";
 
 export default function UseQueryGetComponent() {
@@ -27,6 +28,7 @@ export default function UseQueryGetComponent() {
         <input type="text" ref={firstName} onChange={firstNameSet} />
         <button type="submit">submit</button>
       </form>
+      <Example />
       {/* <button onClick={refetch}>click me</button> */}
     </div>
   );

@@ -1,0 +1,11 @@
+npm i packageName
+npm uninstall packageName 
+npm i moment - install as normal dependecny
+npm i -D moment - here no warning it just replaces
+
+yarn add packageName
+yarn remove packageName
+
+yarn add moment 
+
+yarn add -D moment - here it warns you to remove from dependecies bedofr add it as dev dependecies
