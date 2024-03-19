@@ -25,6 +25,7 @@ const backendErrors = {
   },
 };
 
+console.log(Object.entries(backendErrors));
 const arr = Object.entries(backendErrors).map(([key, value]) => {
   const str = value.errors.map((message) => message.message).join(", ");
   const capitalize = key.charAt(0).toUpperCase() + key.slice(1);

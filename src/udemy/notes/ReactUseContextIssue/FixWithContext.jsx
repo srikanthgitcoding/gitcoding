@@ -9,7 +9,6 @@ const ContContextProvider =({children})=>{
 }
 
 const FixIssueWithContextAPI = () => {
-    
   return (
     <div>
     <ContContextProvider>

@@ -1,0 +1,18 @@
+variable created using var, will create properties on the window object or global object 
+
+let and const variables doesnt create properties on window object
+
+HOw to check ? var x = 20; let y = 30; const z = 400;
+----------------
+x === window.x   = true 
+y === window.y   = false 
+z === window.z   = false
+
+* arrow function inherits this keyword from parent scope
+
+// falsy values in js 
+
+undeinfed, null, 0,false,NAN, 
+
+
+//Truthy Values that May Appear as Falsy Values

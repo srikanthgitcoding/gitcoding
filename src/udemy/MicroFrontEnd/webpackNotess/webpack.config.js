@@ -91,5 +91,11 @@ module.exports = {
 //  branches :
 //    - main
 //     -master
-    path:
-    -packages
+    // path:
+    // -packages
+
+//----deploy to amazon s3 bucket---
+
+//s3 bucket set up 
+//1) create s3 bucket (create bucket)
+//2 region name will be usweful later - us-east-1 
