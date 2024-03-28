@@ -43,31 +43,30 @@ class LinkedList {
       }
       nxt.next = appendObj;
     }
-    this.size++;
-  }
-
-  print() {
-    if (this.isListEmpty()) {
-      console.log("print - list is empty");
-    } else {
-      let curr = this.head;
-      let listValue = "";
-      while (curr) {
-        // console.log("print", curr);
-
-        listValue += `${curr.currentValue} `;
-        curr = curr.next;
-      }
-      //   console.log("lsi", listValue);
+    //by default list will be empty we have to make the first node as head
+    prepend(value){
+        var newNode = new Node(value)
+        if(this.isListEmpty()){
+            this.head = newNode
+        }else{
+            newNode.next = this.head
+            this.head = newNode 
+        }
+        this.size++
     }
-  }
-  //adding items to exisitng list
-  //-------------------------------
-  removeFrom(index) {
-    //scenario 1 the given index should nt be l;ess than zer and gretaer or equal to the size of lists
-    //scenario 2 - where index is 0
-    if (index < 0 || index >= this.size) {
-      return;
+    append(val){
+        let appendObj = new Node(val)
+        if(this.isListEmpty()){
+            this.head = appendObj
+        }else{  
+            let nxt = this.head
+            while(nxt.next){
+                console.log("append", nxt)
+                nxt = nxt.next
+            }
+            nxt.next = appendObj 
+        }
+        this.size++
     }
     let removedNode;
     if (index === 0) {
@@ -99,16 +98,21 @@ class LinkedList {
         }
       }
     }
-  }
-  serachByValue(value) {
-    if (this.isListEmpty()) {
-      return -1;
-    } else {
-      let curr = this.head;
-      let index = 0;
-      while (curr) {
-        if (value === curr.currentValue) {
-          return index;
+    removeByValue(value){
+        if(this.isListEmpty()){
+            console.log("print - list is empty")
+        }else{
+            let curr = this.head
+        while(curr){
+            if(value === curr.currentValue){
+                curr = curr.nextNodeRef
+                console.log("this.head", this.head)
+                this.head = curr
+                this.size--
+            }else{
+                curr = curr.next 
+            }
+        }
         }
         curr = curr.next;
         index++;
@@ -137,21 +141,21 @@ class LinkedList {
   }
 }
 
-const linkedListObj = new LinkedList();
-console.log("---", linkedListObj.getSize());
-console.log("---", linkedListObj.isListEmpty());
-console.log("---", linkedListObj.prepend(10));
-console.log("---", linkedListObj.prepend(20));
-console.log("---", linkedListObj.prepend(30));
-console.log("---", linkedListObj.append(10));
-// console.log("---", linkedListObj.append(20));
-// console.log("---", linkedListObj.append(30));
-// console.log("---", linkedListObj.append(10));
-// console.log("---", linkedListObj.append(20));
-// console.log("---", linkedListObj.append(30));
-// console.log("---", linkedListObj.insert(10,0))
-// console.log("---", linkedListObj.removeByValue(20));
-// console.log("---print", linkedListObj.print());
+const linkedListObj = new LinkedList()
+linkedListObj.prepend(10)
+linkedListObj.prepend(20)
+linkedListObj.prepend(30)
+linkedListObj.append(40)
+console.log("---", linkedListObj.removeByValue(10))
 
-// console.log("search by--", linkedListObj.serachByValue(30));
+// console.log("---", linkedListObj.getSize())
+// console.log("---", linkedListObj.isListEmpty())
+// console.log("---", linkedListObj.append(10))
+// console.log("---", linkedListObj.append(20))
+// console.log("---", linkedListObj.append(30))
+// // console.log("---", linkedListObj.insert(10,0))
+// console.log("---", linkedListObj.removeByValue(20))
+// console.log("---print", linkedListObj.print())
+
+// console.log("search by--", linkedListObj.serachByValue(30))
 // console.log("print --", linkedListObj.print())

@@ -7,9 +7,10 @@ function WindowSlide(arr,k){
     while(j < arr.length){
         sum+=arr[j]
         if(j-i+1 === k){
-            max = sum > max ? sum : max 
-            i++
+            max = Math.max(sum,max)
             sum-=arr[i]
+            i++
+
         }
         j++
     }
@@ -24,7 +25,3 @@ function WindowSlide(arr,k){
 var arr = [10,20,30,40,50]
 
 console.log(WindowSlide(arr,3))
-
-10
-20
-30
